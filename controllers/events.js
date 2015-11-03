@@ -26,7 +26,8 @@ var allowedDateInfo = {
   hours: [
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
     12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23
-  ]
+  ],
+  years: [2015, 2016]
 };
 
 /**
@@ -90,9 +91,14 @@ function saveEvent(request, response){
   var month = checkIntRange(request, 'month', 0, 11, contextData);  
   var day = checkIntRange(request, 'day', 1, 31, contextData);
   var hour = checkIntRange(request, 'hour', 0, 23, contextData);
-
+  
+  if(!validator.isURL(request.body.image) || (request.body.image.match(/\.(gif|png)$/i) === null)){
+    contextData.errors.push('Your image should be a gif or png');
+  }
+  
   if (contextData.errors.length === 0) {
     var newEvent = {
+      id: events.getMaxId + 1,
       title: request.body.title,
       location: request.body.location,
       image: request.body.image,
@@ -100,7 +106,7 @@ function saveEvent(request, response){
       attending: []
     };
     events.all.push(newEvent);
-    response.redirect('/events');
+    response.redirect('/events/' + newEvent.id);
   }else{
     response.render('create-event.html', contextData);
   }
