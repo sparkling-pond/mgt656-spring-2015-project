@@ -46,7 +46,7 @@ function listEvents(request, response) {
  * Controller that renders a page for creating new events.
  */
 function newEvent(request, response){
-  var contextData = {};
+  var contextData = {allowedDateInfo: allowedDateInfo};
   response.render('create-event.html', contextData);
 }
 
@@ -98,7 +98,7 @@ function saveEvent(request, response){
   
   if (contextData.errors.length === 0) {
     var newEvent = {
-      id: events.getMaxId + 1,
+      id: events.getMaxId() + 1,
       title: request.body.title,
       location: request.body.location,
       image: request.body.image,

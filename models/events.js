@@ -63,6 +63,7 @@ function getMaxId() {
   }
   return maxId;
 }
+
 module.exports = exports = {
   all: allEvents,
   getById: getById,
