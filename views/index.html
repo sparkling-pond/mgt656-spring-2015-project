@@ -14,8 +14,16 @@
   <p>
     Check out the <a href="/about">About us</a> page
     as well as the <a href="/events">Events</a> page.
+  </p>  
+  <p> 
+  Here is our list of current events
   </p>
+  <div style="border: 1px solid black">    
+    {% include "fragments/events-list.html" %}
+  </div>
   <p>
     <a id="new" href="/events/new">Create a new event</a>
   </p>
+
+
 {% endblock %}
