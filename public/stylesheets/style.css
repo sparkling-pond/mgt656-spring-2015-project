@@ -1,6 +1,13 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 60px;
+  font: 44px "Tahoma", Helvetica, Arial, sans-serif !important; 
+  text-align: center;
+  color: white !important;
+    background: url(http://kenmclane.org/images/party_bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 a {
@@ -11,9 +18,25 @@ a {
 	color: red;
 }
 
-footer{
-  background-color: gray;
+header{
   padding: 1em;
-  border: 1px solid #ddd;
+  border: 0px solid #ddd;
+  margin: 0em 0;
+  text-align: center;
+  font-size: 40px;
+  width: 100%;
+  color: green;
+}
+
+header h1{
+  font-size: 88px;
+}
+
+
+footer{
+  padding: 1em;
+  border: 0px solid #ddd;
   margin: 2em 0;
-};
+  text-align: center;
+  font-size: 40px;
+}
