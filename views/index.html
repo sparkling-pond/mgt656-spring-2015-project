@@ -2,28 +2,39 @@
 
 {% block header %}
   <header>
-    <h1>{{ title }} For the win</h1>
+    <h1>{{ title }}</h1>
+    <img id="logo" src=http://www.clipartbest.com/cliparts/KTj/gyo/KTjgyoLAc.png>
   </header>
 {% endblock %}
 
 {% block mainContent %}
+  
+  <div id="welcomeabout">
   <p>
-    Welcome to {{ title }}. {{tagline}}
+    Welcome to {{ title }}
   </p>
-  <img id ="logo" src="http://i.imgur.com/OYBr3hc.png">
-  <p>
+  <p>  
+    {{tagline}}
+  </p>
+  </div>
+  
+  <div id="checkusout">
+  <p id="p1">
     Check out the <a href="/about">About us</a> page
     as well as the <a href="/events">Events</a> page.
-  </p>  
-  <p> 
-  Here is our list of current events
   </p>
-  <div style="border: 1px solid black">    
+  </div>
+  
+  <div id="upcomingevents">
+  <p> 
+  Upcoming Official Thumbs Up Events
+  </p>
     {% include "fragments/events-list.html" %}
   </div>
+  <div id="createevent">
   <p>
     <a id="new" href="/events/new">Create a new event</a>
   </p>
-
+  </div>
 
 {% endblock %}

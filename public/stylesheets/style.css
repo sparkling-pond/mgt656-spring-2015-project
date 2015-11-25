@@ -2,8 +2,8 @@ body {
   padding: 60px;
   font: 44px "Tahoma", Helvetica, Arial, sans-serif !important; 
   text-align: center;
-  color: white !important;
-    background: url(http://kenmclane.org/images/party_bg.jpg) no-repeat center center fixed; 
+  color: gray !important;
+    background: url(http://static1.squarespace.com/static/55c37beae4b0336075603f86/55c3cd80e4b01531b3208f2e/5603032be4b008bd0ad4e6fb/1443279872878/?format=1500w) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -18,6 +18,39 @@ a {
 	color: red;
 }
 
+#welcomeabout {
+    width: auto;
+    height: 400px;
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+
+
+#checkusout {
+    width: auto;
+    height: 400px;
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+
+#upcomingevents {
+    width: auto;
+    height: 400px;
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+
+#createevent {
+    width: auto;
+    height: 100px;
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+
 header{
   padding: 1em;
   border: 0px solid #ddd;
@@ -25,11 +58,11 @@ header{
   text-align: center;
   font-size: 40px;
   width: 100%;
-  color: green;
+  color: blue;
 }
 
 header h1{
-  font-size: 88px;
+  font-size: 150px;
 }
 
 
@@ -39,4 +72,5 @@ footer{
   margin: 2em 0;
   text-align: center;
   font-size: 40px;
+  color: white;
 }
