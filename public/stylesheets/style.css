@@ -43,6 +43,10 @@ a {
     text-align: center;
 }
 
+#upcomingevents ul {
+      list-style:none;
+}
+
 #createevent {
     width: auto;
     height: 100px;
