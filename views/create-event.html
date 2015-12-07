@@ -49,17 +49,20 @@
       
       <div class="form group">
         <label for="day">Event Day:</label>
-        <input type="text" name="day">
+        <select name="day" id="day">
+        {% for day in allowedDateInfo.days %}
+        <option value="{{day}}">{{day}}</option>
+        {% endfor %}
       </div>
-   
+      
       <div class="form group">
         <label for="hour">Event Hour:</label>
         <select name="hour" id="hour">
-        {% for hour in allowedDateInfo.hours %}
+        {% for day in allowedDateInfo.hours %}
         <option value="{{hour}}">{{hour}}</option>
         {% endfor %}
-        </select>
       </div>
+   
    
       <div class="form group">
         <label for="minute">Event Minute:</label>
